@@ -98,6 +98,6 @@ getDisplays() => Promise<{ displays: number; }>
 
 #### OpenLinkOptions
 
-<code>{url: string, htmlStrings?: string} | {htmlStrings: string, url?: string}</code>
+<code>{ url: string; htmlStrings?: string; baseUrl?: string; } | { htmlStrings: string; url?: string; baseUrl?: string; }</code>
 
 </docgen-api>

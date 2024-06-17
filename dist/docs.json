@@ -1,0 +1,135 @@
+{
+  "api": {
+    "name": "CapacitorPresentationPlugin",
+    "slug": "capacitorpresentationplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "openLink",
+        "signature": "(options: OpenLinkOptions) => Promise<{ success?: any; error?: any; url?: any; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "OpenLinkOptions"
+          }
+        ],
+        "returns": "Promise<{ success?: any; error?: any; url?: any; }>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options"
+          },
+          {
+            "name": "param",
+            "text": "url works only web"
+          },
+          {
+            "name": "param",
+            "text": "htmlStrings works only android"
+          }
+        ],
+        "docs": "",
+        "complexTypes": [
+          "OpenLinkOptions"
+        ],
+        "slug": "openlink"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'onSuccessLoadUrl', listenerFunc: (data: any) => void) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'onSuccessLoadUrl'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(data: any) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle"
+        ],
+        "slug": "addlisteneronsuccessloadurl"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'onFailLoadUrl', listenerFunc: (data: any) => void) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'onFailLoadUrl'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(data: any) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle"
+        ],
+        "slug": "addlisteneronfailloadurl"
+      },
+      {
+        "name": "getDisplays",
+        "signature": "() => Promise<{ displays: number; }>",
+        "parameters": [],
+        "returns": "Promise<{ displays: number; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "getdisplays"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [
+    {
+      "name": "OpenLinkOptions",
+      "slug": "openlinkoptions",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n    url: string;\n    htmlStrings?: string;\n    baseUrl?: string;\n}",
+          "complexTypes": []
+        },
+        {
+          "text": "{\n    htmlStrings: string;\n    url?: string;\n    baseUrl?: string;\n}",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}
